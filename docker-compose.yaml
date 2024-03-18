@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  project:
+    build:
+      context: project
+      dockerfile: docker/Dockerfile
+    restart: "no"
+    networks:
+      - project
+
+networks:
+  project:
+    driver: bridge
+
